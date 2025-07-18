@@ -1,21 +1,21 @@
-# Tech Challenge - API de Livros
+# 📚 Tech Challenge - API de Livros
 
-Este projeto é parte do Tech Challenge da FIAP para a fase Machine Learning Engineering.
+Este projeto faz parte do **Tech Challenge da FIAP** para a fase Machine Learning Engineering.
 
-O objetivo é criar uma API pública que sirva dados de livros extraídos do site [Books to Scrape](https://books.toscrape.com/), com potencial de uso para cientistas de dados e modelos de machine learning.
+🎯 **Objetivo:** Criar uma API pública que serve dados de livros extraídos do site [Books to Scrape](https://books.toscrape.com/), com potencial de uso para cientistas de dados e modelos de machine learning.
 
 ---
 
-## 📦 Como rodar o projeto localmente
+## 🚀 Como rodar o projeto localmente
 
-1. Clone o repositório:
+1️⃣ **Clone o repositório**
 git clone https://github.com/johnrobert-oli/tech-challenge-books.git
 
 cpp
 Copiar
 Editar
 
-2. Crie um ambiente virtual e ative:
+2️⃣ **Crie o ambiente virtual e ative**
 python -m venv venv
 
 Windows:
@@ -28,21 +28,21 @@ csharp
 Copiar
 Editar
 
-3. Instale as dependências:
+3️⃣ **Instale as dependências**
 pip install -r requirements.txt
 
 markdown
 Copiar
 Editar
 
-4. Rode o script de scraping:
+4️⃣ **Rode o script de scraping**
 python scripts/scraping.py
 
 css
 Copiar
 Editar
 
-5. Rode a API Flask:
+5️⃣ **Rode a API Flask**
 python api/app.py
 
 yaml
@@ -51,41 +51,44 @@ Editar
 
 ---
 
-## 🚀 Endpoints disponíveis
+## 📡 Endpoints disponíveis
 
-- **GET /** → Verificar status da API  
-- **GET /api/v1/books** → Lista todos os livros  
-- **GET /api/v1/books/<id>** → Detalhe de um livro pelo índice  
-- **GET /api/v1/categories** → Lista todas as categorias  
-- **GET /api/v1/books/search?title=...&category=...** → Busca por título ou categoria
+✅ **GET /** → Verificar status da API  
+✅ **GET /api/v1/books** → Listar todos os livros  
+✅ **GET /api/v1/books/<id>** → Consultar um livro pelo índice  
+✅ **GET /api/v1/categories** → Listar todas as categorias  
+✅ **GET /api/v1/books/search?title=...&category=...** → Buscar por título e/ou categoria
 
 ---
 
-## 💡 Exemplo de uso
+## 💡 Exemplos de uso
 
 - `http://127.0.0.1:5000/api/v1/books/0` → Primeiro livro  
 - `http://127.0.0.1:5000/api/v1/categories` → Categorias  
-- `http://127.0.0.1:5000/api/v1/books/search?title=sapiens` → Busca "sapiens"
+- `http://127.0.0.1:5000/api/v1/books/search?title=sapiens` → Buscar livros com "sapiens" no título
 
 ---
 
-## 📊 Diagrama arquitetural
+## 🛠️ Diagrama arquitetural
 
-(Sugestão: insira aqui uma imagem do diagrama ou descreva o fluxo)
-Scraping → CSV → API Flask → Usuário final
+[ Scraping.py ] → [ books.csv ] → [ API Flask ] → [ Usuário / Cientista de Dados ]
 
 yaml
 Copiar
 Editar
 
+*(Você pode substituir por uma imagem de diagrama quando fizer.)*
+
 ---
 
-## 🌍 Deploy (quando disponível)
+## 🌍 Deploy
 
-(Adicione aqui o link do Render ou Heroku quando fizer o deploy)
+*(Se fizer deploy, insira aqui o link do Render ou Heroku)*
 
 ---
 
 ## 👨‍💻 Autor
 
-johnrobert-oli
+- **Nome:** John Robert  
+- **GitHub:** [johnrobert-oli](https://github.com/johnrobert-oli)
+
