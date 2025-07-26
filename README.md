@@ -1,94 +1,110 @@
-# 📚 Tech Challenge - API de Livros
-
-Este projeto faz parte do **Tech Challenge da FIAP** para a fase Machine Learning Engineering.
-
-🎯 **Objetivo:** Criar uma API pública que serve dados de livros extraídos do site [Books to Scrape](https://books.toscrape.com/), com potencial de uso para cientistas de dados e modelos de machine learning.
-
----
-
-## 🚀 Como rodar o projeto localmente
-
-1️⃣ **Clone o repositório**
-git clone https://github.com/johnrobert-oli/tech-challenge-books.git
-
-cpp
-Copiar
-Editar
-
-2️⃣ **Crie o ambiente virtual e ative**
-python -m venv venv
-
-Windows:
-venv\Scripts\activate
-
-Mac/Linux:
-source venv/bin/activate
-
-csharp
-Copiar
-Editar
-
-3️⃣ **Instale as dependências**
-pip install -r requirements.txt
-
+📝 README.md
 markdown
 Copiar
 Editar
+# 📚 Tech Challenge - Fase 1: Machine Learning Engineering
 
-4️⃣ **Rode o script de scraping**
+## 📌 Descrição do Projeto
+
+Este projeto tem como objetivo aplicar os conhecimentos de engenharia de dados na construção de um pipeline de coleta e exposição de dados por meio de uma API REST. Os dados são extraídos automaticamente do site [Books to Scrape](https://books.toscrape.com/), salvos em um arquivo CSV e disponibilizados por meio de uma API desenvolvida com Flask.
+
+---
+
+## 🧪 Tecnologias Utilizadas
+
+- Python
+- Flask
+- BeautifulSoup
+- Pandas
+- Git & GitHub
+- VS Code
+
+---
+
+## 🛠️ Funcionalidades
+
+✅ Web Scraping automatizado das categorias e livros  
+✅ Armazenamento dos dados em `books.csv`  
+✅ API RESTful com autenticação básica  
+✅ Filtros de busca por título e listagem de livros e categorias  
+✅ Código modular e organizado
+
+---
+
+## 📁 Estrutura do Projeto
+
+tech-challenge-books/
+│
+├── api/
+│ └── app.py # API Flask
+│
+├── data/
+│ └── books.csv # Arquivo com os dados extraídos
+│
+├── scripts/
+│ └── scraping.py # Script de web scraping
+│
+├── test_read_csv.py # Script para testar leitura do CSV
+│
+├── README.md
+└── requirements.txt # Bibliotecas necessárias
+
+yaml
+Copiar
+Editar
+
+---
+
+## 🧭 Arquitetura da Solução
+
+![Diagrama da Solução](./assets/diagrama.png)
+
+---
+
+## 🚀 Como Executar o Projeto Localmente
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/johnrobert-oli/tech-challenge-books.git
+Crie e ative um ambiente virtual:
+
+bash
+Copiar
+Editar
+python -m venv venv
+venv\Scripts\activate
+Instale as dependências:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+Execute o scraping para gerar o arquivo CSV:
+
+bash
+Copiar
+Editar
 python scripts/scraping.py
+Inicie a API:
 
-css
+bash
 Copiar
 Editar
-
-5️⃣ **Rode a API Flask**
 python api/app.py
+🔍 Exemplos de Rotas
+http://127.0.0.1:5000/ → Teste de conexão: “API de Livros funcionando!”
+
+http://127.0.0.1:5000/api/v1/books/0 → Retorna o livro com índice 0
+
+http://127.0.0.1:5000/api/v1/categories → Lista de categorias (serão preenchidas)
+
+http://127.0.0.1:5000/api/v1/books/search?title=harry → Pesquisa por título
+
+🧠 Autor
+John Robert
+GitHub: @johnrobert-oli
 
 yaml
 Copiar
 Editar
-
----
-
-## 📡 Endpoints disponíveis
-
-✅ **GET /** → Verificar status da API  
-✅ **GET /api/v1/books** → Listar todos os livros  
-✅ **GET /api/v1/books/<id>** → Consultar um livro pelo índice  
-✅ **GET /api/v1/categories** → Listar todas as categorias  
-✅ **GET /api/v1/books/search?title=...&category=...** → Buscar por título e/ou categoria
-
----
-
-## 💡 Exemplos de uso
-
-- `http://127.0.0.1:5000/api/v1/books/0` → Primeiro livro  
-- `http://127.0.0.1:5000/api/v1/categories` → Categorias  
-- `http://127.0.0.1:5000/api/v1/books/search?title=sapiens` → Buscar livros com "sapiens" no título
-
----
-
-## 🛠️ Diagrama arquitetural
-
-[ Scraping.py ] → [ books.csv ] → [ API Flask ] → [ Usuário / Cientista de Dados ]
-
-yaml
-Copiar
-Editar
-
-*(Você pode substituir por uma imagem de diagrama quando fizer.)*
-
----
-
-## 🌍 Deploy
-
-*(Se fizer deploy, insira aqui o link do Render ou Heroku)*
-
----
-
-## 👨‍💻 Autor
-
-- **Nome:** John Robert  
-- **GitHub:** [johnrobert-oli](https://github.com/johnrobert-oli)
-
