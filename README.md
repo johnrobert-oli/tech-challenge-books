@@ -59,6 +59,7 @@ Editar
 
 ![Diagrama da Arquitetura](assets/diagrama.png)
 
+
 ---
 
 ## 🚀 Como Executar o Projeto Localmente
