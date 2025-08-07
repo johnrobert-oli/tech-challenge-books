@@ -57,9 +57,7 @@ Editar
 
 ## 🧭 Arquitetura da Solução
 
-![Diagrama explicativo](assets/diagrama.png)
-
-
+![Diagrama da Arquitetura](assets/diagrama-v2.png)
 
 
 ---
