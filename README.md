@@ -50,7 +50,7 @@ tech-challenge-books/
 ---
 
 ## 🧭 Arquitetura da Solução
-![Diagrama da Arquitetura](assets/diagrama-v2.png)
+![Diagrama da Arquitetura](assets/diagrama-v2.jpg)
 
 ---
 
