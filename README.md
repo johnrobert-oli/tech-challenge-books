@@ -1,111 +1,130 @@
-📝 README.md
-markdown
-Copiar
-Editar
 # 📚 Tech Challenge - Fase 1: Machine Learning Engineering
 
 ## 📌 Descrição do Projeto
-
-Este projeto tem como objetivo aplicar os conhecimentos de engenharia de dados na construção de um pipeline de coleta e exposição de dados por meio de uma API REST. Os dados são extraídos automaticamente do site [Books to Scrape](https://books.toscrape.com/), salvos em um arquivo CSV e disponibilizados por meio de uma API desenvolvida com Flask.
+Este projeto aplica conceitos de engenharia de dados para criar um pipeline de coleta e exposição de dados através de uma API REST.  
+Os dados são extraídos automaticamente do site [Books to Scrape](https://books.toscrape.com/), salvos em um arquivo CSV e disponibilizados por uma API desenvolvida com Flask.
 
 ---
 
 ## 🧪 Tecnologias Utilizadas
-
 - Python
 - Flask
 - BeautifulSoup
 - Pandas
 - Git & GitHub
 - VS Code
+- Gunicorn
+- Render (deploy)
 
 ---
 
 ## 🛠️ Funcionalidades
-
 ✅ Web Scraping automatizado das categorias e livros  
 ✅ Armazenamento dos dados em `books.csv`  
-✅ API RESTful com autenticação básica  
+✅ API RESTful para consulta de dados  
 ✅ Filtros de busca por título e listagem de livros e categorias  
-✅ Código modular e organizado
+✅ Deploy público na plataforma Render  
 
 ---
 
 ## 📁 Estrutura do Projeto
-
+```
 tech-challenge-books/
 │
 ├── api/
-│ └── app.py # API Flask
+│   └── app.py               # API Flask
 │
 ├── data/
-│ └── books.csv # Arquivo com os dados extraídos
+│   └── books.csv            # Arquivo com os dados extraídos
 │
 ├── scripts/
-│ └── scraping.py # Script de web scraping
+│   └── scraping.py          # Script de web scraping
 │
-├── test_read_csv.py # Script para testar leitura do CSV
+├── test_read_csv.py         # Teste de leitura do CSV
 │
 ├── README.md
-└── requirements.txt # Bibliotecas necessárias
-
-yaml
-Copiar
-Editar
+├── requirements.txt         # Bibliotecas necessárias
+└── runtime.txt              # Versão do Python para deploy
+```
 
 ---
 
 ## 🧭 Arquitetura da Solução
-
 ![Diagrama da Arquitetura](assets/diagrama-v2.png)
-
 
 ---
 
 ## 🚀 Como Executar o Projeto Localmente
 
-1. **Clone o repositório:**
-
+1. **Clone o repositório**
 ```bash
 git clone https://github.com/johnrobert-oli/tech-challenge-books.git
-Crie e ative um ambiente virtual:
+```
 
-bash
-Copiar
-Editar
+2. **Crie e ative um ambiente virtual**
+```bash
 python -m venv venv
-venv\Scripts\activate
-Instale as dependências:
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # Linux/Mac
+```
 
-bash
-Copiar
-Editar
+3. **Instale as dependências**
+```bash
 pip install -r requirements.txt
-Execute o scraping para gerar o arquivo CSV:
+```
 
-bash
-Copiar
-Editar
+4. **Execute o scraping para gerar o arquivo CSV**
+```bash
 python scripts/scraping.py
-Inicie a API:
+```
 
-bash
-Copiar
-Editar
+5. **Inicie a API**
+```bash
 python api/app.py
-🔍 Exemplos de Rotas
-http://127.0.0.1:5000/ → Teste de conexão: “API de Livros funcionando!”
+```
 
-http://127.0.0.1:5000/api/v1/books/0 → Retorna o livro com índice 0
+---
 
-http://127.0.0.1:5000/api/v1/categories → Lista de categorias (serão preenchidas)
+## 🔗 API Online no Render
+A API também está disponível publicamente no Render:  
+Base URL: **https://api-books-xot1.onrender.com**
 
-http://127.0.0.1:5000/api/v1/books/search?title=harry → Pesquisa por título
+---
 
-🧠 Autor
-John Robert
-GitHub: @johnrobert-oli
+## 🔍 Exemplos de Rotas
 
-yaml
-Copiar
-Editar
+**Teste de conexão**
+```
+GET / → https://api-books-xot1.onrender.com/
+```
+
+**Health check**
+```
+GET /api/v1/health → https://api-books-xot1.onrender.com/api/v1/health
+```
+
+**Listar todos os livros**
+```
+GET /api/v1/books → https://api-books-xot1.onrender.com/api/v1/books
+```
+
+**Livro por ID**
+```
+GET /api/v1/books/0 → https://api-books-xot1.onrender.com/api/v1/books/0
+```
+
+**Listar categorias**
+```
+GET /api/v1/categories → https://api-books-xot1.onrender.com/api/v1/categories
+```
+
+**Buscar por título**
+```
+GET /api/v1/books/search?title=harry → https://api-books-xot1.onrender.com/api/v1/books/search?title=harry
+```
+
+---
+
+## 🧠 Autor
+**John Robert**  
+GitHub: [@johnrobert-oli](https://github.com/johnrobert-oli)
