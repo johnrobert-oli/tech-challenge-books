@@ -93,35 +93,15 @@ Base URL: **https://api-books-xot1.onrender.com**
 
 ## 🔍 Exemplos de Rotas
 
-**Teste de conexão**
-```
-GET / → https://api-books-xot1.onrender.com/
-```
-
-**Health check**
-```
-GET /api/v1/health → https://api-books-xot1.onrender.com/api/v1/health
-```
-
-**Listar todos os livros**
-```
-GET /api/v1/books → https://api-books-xot1.onrender.com/api/v1/books
-```
-
-**Livro por ID**
-```
-GET /api/v1/books/0 → https://api-books-xot1.onrender.com/api/v1/books/0
-```
-
-**Listar categorias**
-```
-GET /api/v1/categories → https://api-books-xot1.onrender.com/api/v1/categories
-```
-
-**Buscar por título**
-```
-GET /api/v1/books/search?title=harry → https://api-books-xot1.onrender.com/api/v1/books/search?title=harry
-```
+| Método | Endpoint | Descrição | Exemplo |
+|--------|----------|-----------|---------|
+| GET | `/` | Teste de conexão | [Link](https://api-books-xot1.onrender.com/) |
+| GET | `/api/v1/health` | Verifica se a API está online | [Link](https://api-books-xot1.onrender.com/api/v1/health) |
+| GET | `/api/v1/books` | Lista todos os livros | [Link](https://api-books-xot1.onrender.com/api/v1/books) |
+| GET | `/api/v1/books/{id}` | Retorna um livro pelo índice | [Link](https://api-books-xot1.onrender.com/api/v1/books/0) |
+| GET | `/api/v1/categories` | Lista todas as categorias | [Link](https://api-books-xot1.onrender.com/api/v1/categories) |
+| GET | `/api/v1/books/search?title={title}` | Busca livros por título | [Link](https://api-books-xot1.onrender.com/api/v1/books/search?title=harry) |
+| GET | `/__routes` | Lista todas as rotas disponíveis (uso interno) | [Link](https://api-books-xot1.onrender.com/__routes) |
 
 ---
 
